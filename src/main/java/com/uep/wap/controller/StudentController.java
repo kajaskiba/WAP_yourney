@@ -1,8 +1,6 @@
 package com.uep.wap.controller;
 
 import com.uep.wap.dto.StudentDTO;
-import com.uep.wap.dto.StudentsDataDTO;
-import com.uep.wap.model.Student;
 import com.uep.wap.service.StudentsService;
 import org.springframework.web.bind.annotation.*;
 
@@ -22,7 +20,7 @@ public class StudentController {
     }
 
     @GetMapping(path = "/students")
-    public Iterable<Student> getAllStudents(){
+    public Iterable<User> getAllStudents(){
         return studentsService.getAllStudents();
     }
 
