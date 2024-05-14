@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping(path = "/api")
 public class Controller {
-
+lol
     private final UserService userService;
 
     public Controller(UserService userService) {
