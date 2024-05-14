@@ -1,6 +1,6 @@
 package com.uep.wap.dto;
 
-public class StudentDTO {
+public class UserDTO {
 
     private String name;
     private Integer points;
@@ -13,11 +13,4 @@ public class StudentDTO {
         this.name = name;
     }
 
-    public Integer getPoints() {
-        return points;
-    }
-
-    public void setPoints(Integer points) {
-        this.points = points;
-    }
 }

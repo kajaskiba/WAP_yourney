@@ -4,13 +4,13 @@ import java.util.List;
 
 public class StudentsDataDTO {
 
-    List<StudentDTO> people;
+    List<UserDTO> people;
 
-    public List<StudentDTO> getPeople() {
+    public List<UserDTO> getPeople() {
         return people;
     }
 
-    public void setPeople(List<StudentDTO> people) {
+    public void setPeople(List<UserDTO> people) {
         this.people = people;
     }
 }
