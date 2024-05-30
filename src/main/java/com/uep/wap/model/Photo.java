@@ -7,9 +7,9 @@ public class Photo {
     @Id
     @GeneratedValue(strategy =  GenerationType.IDENTITY)
     @Column(name = "photo_id")
-    private int photo_id;
+    private int photoID;
     @Column(name = "image_url")
-    private String image_url;
+    private String imageURL;
     public Photo(){
 
     }
@@ -34,8 +34,8 @@ public class Photo {
     @JoinColumn(name = "user_id")
     private User users;
 
-    public int getPhoto_id() {
-        return photo_id;
+    public int getPhotoID() {
+        return photoID;
     }
     @Column(name = "upload_date")
     private int upload_date;
@@ -46,16 +46,16 @@ public class Photo {
     @Column(name = "description")
     private String description;
 
-    public void setPhoto_id(int photo_id) {
-        this.photo_id = photo_id;
+    public void setPhotoID(int photo_id) {
+        this.photoID = photo_id;
     }
 
-    public String getImage_url() {
-        return image_url;
+    public String getImageURL() {
+        return imageURL;
     }
 
-    public void setImage_url(String image_url) {
-        this.image_url = image_url;
+    public void setImageURL(String image_url) {
+        this.imageURL = image_url;
     }
 
     public int getUpload_date() {

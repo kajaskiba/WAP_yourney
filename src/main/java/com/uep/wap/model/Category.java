@@ -9,7 +9,7 @@ public class Category {
     @Id
     @GeneratedValue(strategy =  GenerationType.IDENTITY)
     @Column(name = "category_id")
-    private int category_id;
+    private int categoryID;
     @Column(name = "name")
     private String name;
 
@@ -20,16 +20,16 @@ public class Category {
     private List<Photo> photos;
 
 
-    public int getCategory_id() {
-        return category_id;
+    public int getCategoryID() {
+        return categoryID;
     }
 
     public Category(){
 
     }
 
-    public void setCategory_id(int category_id) {
-        this.category_id = category_id;
+    public void setCategoryID(int category_id) {
+        this.categoryID = category_id;
     }
 
     public String getName() {

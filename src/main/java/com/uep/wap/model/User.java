@@ -8,7 +8,7 @@ public class User {
     @Id
     @GeneratedValue(strategy =  GenerationType.IDENTITY)
     @Column(name = "user_id")
-    private int user_id;
+    private int userID;
     @Column(name = "username")
     private String username;
     @Column(name = "gender")
@@ -18,29 +18,31 @@ public class User {
     @Column(name = "password")
     private String password;
     @Column(name = "profile_picture")
-    private String profile_picture;
+    private String profilePicture;
     @Column(name = "bio")
     private String bio;
     @Column(name = "role")
     private String role;
 
-    private User(){
 
-    }
 
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "users", cascade = CascadeType.ALL)
     private List<Interaction> interactions;
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "users", cascade = CascadeType.ALL)
     private List<Photo> photos;
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "users", cascade = CascadeType.ALL)
     private List<Board> boards;
 
-    public int getUser_id() {
-        return user_id;
+    public User() {
+
     }
 
-    public void setUser_id(int user_id) {
-        this.user_id = user_id;
+    public int getUserID() {
+        return userID;
+    }
+
+    public void setUserID(int user_id) {
+        this.userID = user_id;
     }
 
     public String getUsername() {
@@ -75,12 +77,12 @@ public class User {
         this.password = password;
     }
 
-    public String getProfile_picture() {
-        return profile_picture;
+    public String getProfilePicture() {
+        return profilePicture;
     }
 
-    public void setProfile_picture(String profile_picture) {
-        this.profile_picture = profile_picture;
+    public void setProfilePicture(String profile_picture) {
+        this.profilePicture = profile_picture;
     }
 
     public String getBio() {

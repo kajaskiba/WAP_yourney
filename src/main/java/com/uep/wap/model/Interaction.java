@@ -7,22 +7,23 @@ public class Interaction {
     @Id
     @GeneratedValue(strategy =  GenerationType.IDENTITY)
     @Column(name = "interaction_id")
-    private int interaction_id;
+    private int interactionID;
 
-    public int getInteraction_id() {
-        return interaction_id;
+
+    public int getInteractionID() {
+        return interactionID;
     }
 
-    public void setInteraction_id(int interaction_id) {
-        this.interaction_id = interaction_id;
+    public void setInteractionID(int interaction_id) {
+        this.interactionID = interaction_id;
     }
 
-    public int getTarget_id() {
-        return target_id;
+    public int getTargetID() {
+        return targetID;
     }
 
-    public void setTarget_id(int target_id) {
-        this.target_id = target_id;
+    public void setTargetID(int target_id) {
+        this.targetID = target_id;
     }
 
     public String getType() {
@@ -41,9 +42,10 @@ public class Interaction {
         this.timestamp = timestamp;
     }
 
-    private Interaction(){
+    public Interaction() {
 
     }
+
 
     @ManyToOne
     @JoinColumn(name = "photo_id")
@@ -53,7 +55,7 @@ public class Interaction {
     @JoinColumn(name = "user_id")
     private User users;
     @Column(name = "target_id")
-    private int target_id;
+    private int targetID;
     @Column(name = "type")
     private String type;
     @Column(name = "timestamp")

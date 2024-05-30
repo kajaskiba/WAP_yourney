@@ -8,21 +8,21 @@ public class Tag {
     @Id
     @GeneratedValue(strategy =  GenerationType.IDENTITY)
     @Column(name = "tag_id")
-    private int tag_id;
+    private int tagID;
     @Column(name = "name")
     private String name;
 
-    private Tag(){
+    public Tag(){
 
     }
     @ManyToMany(mappedBy = "tags")
     private List<Photo> photos;
-    public int getTag_id() {
-        return tag_id;
+    public int getTagID() {
+        return tagID;
     }
 
-    public void setTag_id(int tag_id) {
-        this.tag_id = tag_id;
+    public void setTagID(int tag_id) {
+        this.tagID = tag_id;
     }
 
     public String getName() {

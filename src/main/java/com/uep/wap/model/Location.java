@@ -7,7 +7,7 @@ public class Location {
     @Id
     @GeneratedValue(strategy =  GenerationType.IDENTITY)
     @Column(name = "location_id")
-    private int location_id;
+    private int locationID;
     @Column(name = "name")
     private String name;
     @Column(name = "latitude")
@@ -21,12 +21,12 @@ public class Location {
     @ManyToMany(mappedBy = "locations")
     private List<Photo> photos;
 
-    public int getLocation_id() {
-        return location_id;
+    public int getLocationID() {
+        return locationID;
     }
 
-    public void setLocation_id(int location_id) {
-        this.location_id = location_id;
+    public void setLocationID(int location_id) {
+        this.locationID = location_id;
     }
 
     public String getName() {

@@ -8,16 +8,17 @@ public class Board {
     @Id
     @GeneratedValue(strategy =  GenerationType.IDENTITY)
     @Column(name = "board_id")
-    private int board_id;
+    private int boardID;
     @Column(name = "title")
     private String title;
     @Column(name = "description")
     private String description;
     @Column(name = "owner_id")
-    private int owner_id;
+    private int ownerID;
 
     @ManyToMany
-    @JoinTable(name = "board_category", joinColumns = @JoinColumn(name = "board_id"), inverseJoinColumns = @JoinColumn(name = "category_id"))
+    @JoinTable(name = "board_category", joinColumns = @JoinColumn(name = "board_id"),
+            inverseJoinColumns = @JoinColumn(name = "category_id"))
     private List<Category> categories;
 
     @ManyToMany(mappedBy = "boards")
@@ -26,8 +27,8 @@ public class Board {
     @JoinColumn(name = "user_id")
     private User users;
 
-    public int getBoard_id() {
-        return board_id;
+    public int getBoardID() {
+        return boardID;
     }
 
     public Board(){
@@ -42,12 +43,12 @@ public class Board {
         return description;
     }
 
-    public int getOwner_id() {
-        return owner_id;
+    public int getOwnerID() {
+        return ownerID;
     }
 
-    public void setBoard_id(int board_id) {
-        this.board_id = board_id;
+    public void setBoardID(int board_id) {
+        this.boardID = board_id;
     }
 
     public void setTitle(String title) {
@@ -58,7 +59,7 @@ public class Board {
         this.description = description;
     }
 
-    public void setOwner_id(int owner_id) {
-        this.owner_id = owner_id;
+    public void setOwnerID(int owner_id) {
+        this.ownerID = owner_id;
     }
 }
